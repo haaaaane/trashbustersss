@@ -14,7 +14,8 @@
   color:#fff; 
   position: relative;
 }
-#header .inner h1 { width:150px; padding:26px 10px; float:left; }
+  #header h1 img { width:120px;}
+#header .inner h1 { padding:26px 10px; float:left; }
 #header .inner .join { 
   position: absolute; 
   top:50%; right:0px;
@@ -43,6 +44,9 @@
   float: left; 
   padding: 38px 30px 26px;
   position: relative;
+}
+#header .opennav {
+  display: none;
 }
 #header #nav .depth1 > li:hover { color: #ff5b1a }
 #header #nav .depth1 > li:hover .depth2 { display: block;}
@@ -86,16 +90,10 @@
   min-height: 100%;
   position: absolute;
   top:0%; left:50%;
-  transform:translateX(-50%);
-
-
+  transform:translateX(-50%)
 }
 /* article2 */
 #section .article2 {
-  background-image:url(../images/about.png), url(../images/sub_img.jpg.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 340px bottom 140px, right 500px top 80px;
-  background-size: 250px, 200px;
   background-color: #505050;
   color: #fff;
   text-align: center;
@@ -103,24 +101,28 @@
   font-size: 16px;
   font-family:'Gothic A1', sans-serif;
   line-height: 1.5;
-  padding:40px 0px;
-
+  padding:40px 0px
 }
-#section .article2 img { 
+
+#section .article2 .cha { 
   width:240px;
   position: absolute;
   top:50%; left:20%;
   transform: translateY(-50%);
   padding:40px 0px;
-
 }
-#section .article2 .subimg {
+#section .article2 .mark{
+  position: absolute;
+  top:15%; right:25%;
+  width:240px;
+  transform:rotate(20deg);
+}
+/* #section .article2 .subimg {
   position: absolute;
   top:130px; left:69%;
-}
+} */
 #section .article2 .about {
   margin:150px 0px;
-  text-align: center;
 }
 #section .article2 .about h2 {
   font-size:30px;
@@ -141,6 +143,7 @@
   height: 100vh;
   position: absolute;
   top:0; left: 0;
+  padding:20px;
 }
 #section .article3 .survicetext {
   position:absolute;
@@ -151,13 +154,10 @@
 #section .article3 .survicetext h2 {
   font-size: 40px;
 }
-#section .article3 .survicetext a {
-  margin-top: 100px;
+#section .article3 .survicebox > span {
   position: absolute;
-  top:210px; left:210px;
-  font-size: 18px;
-  font-family: 'Gothic A1', sans-serif;
-}
+  bottom:10%; left:58%;
+ }
 .article3 .changebox {
   width:71%;
   margin-left:29%;
@@ -221,47 +221,52 @@
   100% { left:500px; transform:scale(1.5); opacity:0 }
 }
 /* article4 */
-#section .article4 {
+.article4 {
   background: #000;
   color:#fff;
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
 }
-#section .article4 h3 {
+.article4 h3 {
   font-size:48px;
   color:#ff5b1a;
-  padding: 70px 0 22px;
+  padding: 70px 0 15px;
   font-family: 'Black Han Sans', sans-serif;
   letter-spacing: 2px;
 }
-#section .article4 .slide-group {
-  margin:0px 300px;
-  position: relative;
-}
-#section .article4 .slideinner {
-  overflow: hidden;
-  /* margin:0px 300px; */
-}
-#section .article4 .slideinner a {
-  float:left; width:20%;
-  padding:80px 15px 100px;
-}
-/* #section .article4 .rudder {
-  font-size: 55px;
-}
-#section .article4 .rudder > div:nth-child(1) {
-  position: absolute;
-  left:150px; top:26px;
+.article4 .slide-group {
+  margin: 0 auto;
+  Width:60%;
+  margin-top: 40px;
 
 }
-#section .article4 .rudder > div:nth-child(2) {
-  position: absolute;
-  right:40px; top:26px;
-
-} */
-#section .article4 .hidden {
-  display:none;
+.article4 .slide {
+margin: 0 10px;
+position: relative;
+margin-bottom: 80px;
 }
+.article4 .slide a::before {
+  content: '';
+  position:absolute; top:0; bottom:0; right:0; left:0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition:all 0.4s
+}
+.article4 .slide a:hover::before { opacity: 1; }
+.article4 .slide-group .slick-arrow {
+  border:none; background:none;
+  font-size:80px; color:#fff; 
+  position:absolute; top:15%; 
+
+}
+.article4 .slide-group .arrleft {
+  left:-80px; z-index:99;
+}
+.article4 .slide-group .arrright {
+  right:-80px;; z-index:99;
+}
+
+
 
 /* article5 */
 
@@ -311,7 +316,7 @@
   background-color: #fff;
   border-radius: 20px;
   margin: 0 auto;
-  padding:25px 25px 25px 140px;
+  padding:60px 25px 25px 140px;
 }
 .article5 .askinner .guide h4 {
   font-size: 24px;
@@ -380,11 +385,11 @@
 }
 .article5 button {
   width:300px;
-  height:80px;
   background-color: #ff5b1a;
   color:#fff;
   border:1px solid #ff5b1a;
   border-radius: 15px;
+  padding:20px;
   position: absolute;
   bottom:20px;
   right:35px;

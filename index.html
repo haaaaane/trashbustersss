@@ -13,6 +13,9 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <title>트래쉬버스터즈</title>
+            <!--[if IE]>
+        <script src="./js/html5Shiv.min.js"></script>
+    <![endif]-->
 </head>
 <body>
   <header id="header">
@@ -24,11 +27,11 @@
       </h1>
       <div class="join">
         <a href="#">로그인</a>
-        <a href="#">회원가입</a>
+        <a href="./join.html">회원가입</a>
       </div>
       <div class="opennav">
         <span class="blind">네비게이션 열고 닫기</span>
-        <!-- <i class="fa-solid fa-bars"></i> -->
+        <i class="fa-solid fa-bars"></i>
       </div>
       <nav id="nav">
         <ul class="depth1 cf">
@@ -75,6 +78,8 @@
           <p>
               트래쉬버스터즈는 일회용품 대신 여러번 사용할 수 있는 다회용 식기를<br>대여하고, 수거 후, 세척하여 다시 대여하는 서비스를 통해<br>소비자들이 습관을 바꾸지 않고도 재사용을 실천할 수 있는 시스템을 만들어 갑니다
           </p>
+          <img class="cha" src="./images/about.png" alt="트래쉬버스터즈로고">
+          <img class="mark" src="./images/sub_img.jpg.png" alt="일회용품금지마크">
         </div>
       </div>
     <div class="article3 cf">
@@ -83,13 +88,13 @@
           <h2>Trash Zero Solution</h2>
           <p>일회용품 쓰레기 문제가 있는 곳, 어디든 출동합니다!</p>
           <p>트레쉬 버스터즈의 서브스로 해결해 보세요.</p>
-          <span><a href="#">서비스 보러 가기</a></span>
         </div>
-        <div class="aniarr">
+        <span><a href="#">서비스 보러 가기</a></span>
+        <!-- <div class="aniarr">
           <i class="fa-solid fa-angles-right"></i>
           <i class="fa-solid fa-angles-right"></i>
           <i class="fa-solid fa-angles-right"></i>
-      </div>
+      </div> -->
       </div>
       <div class="changebox">
         <div class="place">
@@ -135,15 +140,43 @@
       <h3>Follow!</h3>
       <p>트래쉬버스터즈의 인스타그램 피드에서 더욱 다양한 소식을 확인하세요!</p>
       <div class="slide-group">
-        <div class="slideinner">
-          <div><a href="https://www.instagram.com/p/CfbJ3QjugcB/?utm_source=ig_web_copy_link"><img src="./images/sns_01.jpg" alt=""></a></div>
-          <div><a href="https://www.instagram.com/p/ChWrjfYucRG/"><img src="./images/sns_02.jpg" alt=""></a></div>
-          <div><a href="https://www.instagram.com/reel/Cf3Wu6mAyaG/?utm_source=ig_web_copy_link"><img src="./images/sns_03.jpg" alt=""></a></div>
-          <div><a href="https://www.instagram.com/p/Chb8ioCOAUI/"><img src="./images/sns_04.jpg" alt=""></a></div>
-          <div><a href="https://www.instagram.com/p/ChCCxhsOCkR/"><img src="./images/sns_05.jpg" alt=""></a></div>
-          <div><a href="#" class=hidden><img src="./images/sns_06.jpg" alt=""></a></div>
-          <div><a href="#" class=hidden><img src="./images/sns_07.jpg" alt=""></a></div>
-          <div><a href="#" class=hidden><img src="./images/sns_08.jpg" alt=""></a></div>
+          <div class="slide slide1">
+            <a href="https://www.instagram.com/p/CfbJ3QjugcB/?utm_source=ig_web_copy_link">
+              <img src="./images/sns_01.jpg" alt="">
+            </a>
+          </div>
+          <div class="slide slide2">
+            <a href="https://www.instagram.com/p/ChWrjfYucRG/">
+              <img src="./images/sns_02.jpg" alt="">
+            </a>
+          </div>
+          <div class="slide slide3">
+            <a href="https://www.instagram.com/reel/Cf3Wu6mAyaG/?utm_source=ig_web_copy_link">
+              <img src="./images/sns_03.jpg" alt="">
+            </a>
+          </div>
+          <div class="slide slide4">
+            <a href="https://www.instagram.com/p/Chb8ioCOAUI/">
+              <img src="./images/sns_04.jpg" alt="">
+            </a></div>
+          <div class="slide slide5">
+            <a href="https://www.instagram.com/p/ChCCxhsOCkR/">
+              <img src="./images/sns_05.jpg" alt="">
+            </a>
+            </div>
+          <div class="slide slide6">
+            <a href="#">
+              <img src="./images/sns_06.jpg" alt="">
+            </a>
+          </div>
+          <div class="slide slide7">
+            <a href="#">
+              <img src="./images/sns_07.jpg" alt="">
+            </a></div>
+          <div class="slide slide8">
+            <a href="#">
+              <img src="./images/sns_08.jpg" alt="">
+            </a>
         </div>
         <!-- <div class="rudder">
           <div>
@@ -152,7 +185,6 @@
           <div>
             <a href="#"><i class="fa-solid fa-angle-right"></i></a>
           </div> -->
-        </div>
       </div>
     </div>
     <div class="article5">
@@ -336,6 +368,6 @@
   </footer>
 
 
-
+<script src="./js/index.js"></script>
 </body>
 </html>

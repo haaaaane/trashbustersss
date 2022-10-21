@@ -22,14 +22,14 @@
 /* 수정 */
 #header .inner .join { 
   position: absolute; 
-  top:50%; right:0px;
+  top:50%; right:-5%;
   transform: translateY(-50%);
   margin-right:130px;
   font-size:14px;
 }
 /* 수정 */
 #header .inner .join a { 
-  margin-left:30px;  
+  margin-left:15px;  
   background:#ff5b1a;
   border:1px solid #ff5b1a;
   color:#fff;
@@ -41,7 +41,7 @@
 }
 /* 수정 */
 #header .opennav {
-  display: block;
+  display: none;
   position: absolute;
   top:50%; right:50px;
   font-size: 30px;
@@ -49,15 +49,12 @@
 }
 /* 수정 */
 #header #nav { 
-  display:none;
+  position: absolute;
+  top:50%; left:20%;
   z-index: 9999;
-  float:fixed;
-  top:0%; right:20%;
-  width: 200px; height: 100%;
-  background: #fff; 
-  transform:translateY(0%);
-  right:0; font-size:18px; 
-  color:#1e1e1e; 
+  transform:translateY(-50%);
+  font-size:16px; 
+  color:#fff; 
   font-family: 'Gothic A1', sans-serif;
   letter-spacing: 1.5px;
 }
@@ -97,47 +94,13 @@
 /* section */
 /* article1 */
 #section .article1 { 
-  background-image:url(../images/main_01.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
   position: relative;
-  margin:0px 50px 80px;
+  margin:0px 50px 20px;
 }
-#section .article1::before {
-  content: '';
-  position: absolute; 
-  top:0; left:0; bottom:0; right:0;
-  background: #1d1e20;
-  opacity: 0;
-  transform: (scale 0.5)
-}
-#section .article1:hover::before { 
-  opacity: 0.8;
-  transform: (scale 0.5);
-  transition: all 0.5s;
-}
-#section .article1 img {
-  width:70%;
-  opacity: 0;
-}
-#section .article1:hover img {
-  opacity: 0.7;
-  transform: (scale 0.4);
-  transition: all 0.5s;
-}
-#section .article1 span {
-  color:#fff;
-  font-size:26px;
-  position: absolute; 
-  bottom:15%; right:12%
-}
-/* article2 */
+
+
+/* article2  수정*/
 #section .article2 {
-  background-image:url(../images/about.png), url(../images/sub_img.jpg.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 340px bottom 140px, right 500px top 80px;
   background-size: 250px, 200px;
   background-color: #505050;
   color: #fff;
@@ -150,16 +113,7 @@
   background-image:none
 }
 #section .article2 img { 
-  width:240px;
-  position: absolute;
-  top:50%; left:20%;
-  transform: translateY(-50%);
-  padding:40px 0px;
-
-}
-#section .article2 .subimg {
-  position: absolute;
-  top:130px; left:69%;
+  display: none;
 }
 #section .article2 .about {
   margin:150px 0px;
@@ -169,7 +123,6 @@
   font-size:30px;
   margin-bottom: 22px;
 }
-
 /* article3 */
 #section .article3 { 
   position: relative;
@@ -177,17 +130,18 @@
   height: 100vh;
   background: #fff;
 }
+/* 수정 */
 #section .survicebox {
   background: #ff5b1a;
   color: #fff;
   width:29%;
   height: 100vh;
-  position: absolute;
-  top:0; left: 0;
+  padding:20px;
 }
+/* 수정 */
 #section .article3 .survicetext {
   position:absolute;
-  top:50%; left:13%;
+  top:50%; left:15%;
   transform: translateY(-50%);
 }
 #section .article3 .survicetext h2 {
@@ -196,11 +150,14 @@
 }
 /* 수정 */
 #section .article3 .survicetext p {
-  margin-right: 30px;
   word-break: keep-all;
+  font-size: 14px;
+  padding:0 20px 0 0;
 }
-#section .article3 .survicetext a {
-  margin-top: 100px;
+/* 수정 */
+#section .article3 .survicebox > span {
+ position: absolute;
+ bottom:10%; left:45%;
 }
 #section .article3 .changebox {
   width:71%;
@@ -231,66 +188,620 @@
   float:right;
   position: relative;
 }
+/* 수정 */
 #section .article3 .textbox::before {
   content: '';
   position: absolute; 
-  top:58%; left:55%; bottom:0; right:0;
+  top:58%; left:54%; bottom:0; right:0;
   background: rgba(0, 0, 0, 0.7);
-  width: 599px;
-  height:155px
+  width: 330px;
+  height:155px;
 }
+/* 추가 */
+.article3 .textbox .aniarr {
+  display: none;
+}
+
+
+
 /* article4 */
-#section .article4 {
+.article4 {
   background: #000;
   color:#fff;
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
 }
-#section .article4 h3 {
+.article4 h3 {
   font-size:48px;
   color:#ff5b1a;
-  padding: 70px 0 22px;
+  padding: 70px 0 15px;
   font-family: 'Black Han Sans', sans-serif;
   letter-spacing: 2px;
 }
-#section .article4 .followbox {
-  margin:0px 200px;
+.article4 .slide-group {
+  margin: 0 auto;
+  Width:60%;
+  margin-top: 40px;
+
 }
-#section .article4 .swiper {
-  overflow: hidden;
-  /* margin:0px 300px; */
+.article4 .slide {
+margin: 0 10px;
+position: relative;
+margin-bottom: 80px;
 }
-#section .article4 .swiper a {
-  float:left; width:20%;
-  padding:40px 7.5px 50px;
+.article4 .slide a::before {
+  content: '';
+  position:absolute; top:0; bottom:0; right:0; left:0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition:all 0.4s
 }
-#section .article4 .hidden {
+.article4 .slide a:hover::before { opacity: 1; }
+.article4 .slide-group .slick-arrow {
+  border:none; background:none;
+  font-size:54px; color:#fff; 
+  position:absolute; top:9%; 
+
+}
+.article4 .slide-group .arrleft {
+  left:-80px; z-index:99;
+}
+.article4 .slide-group .arrright {
+  right:-80px;; z-index:99;
+}
+.article4 li {display: none;}
+
+
+
+
+/* article5 */
+
+.article5 .askbox {
+  width:100%;
+  background-color: #ff5b1a;
+  padding-top: 80px;
+  padding-bottom: 75px;
+  position: relative;
+}
+.article5 .wait {
+  width:20%;
+  background: #000;
+  position: absolute;
+  top:50%; left:0;
+  transform:translateY(-50%);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding:40px 0;
+}
+
+
+/* .article5 .wait { transform:translateX(-50%); opacity:0; transition:all 1s } */
+/* .article5.on .wait {transform:translateX(20%); opacity:1 } */
+.article5 .wait .waittext {
+  text-align: center;
+  color:#e8fd01
+}
+.article5 .wait img{
+  width:45%;
+  margin:30px 0px 45px 0px;
+}
+.article5 .wait h4 {
+  font-size:30px;
+  margin-bottom: 10px;
+}
+.article5 .waittext a {
+  color:#fff;
+  margin: 20px 0 30px;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding:10px 16px;
+  margin-top: 60px;
+}
+/* 추가 */
+/* .article5 .waittext > img {
+  opacity: 0;
+} */
+.article5 .askbox .askinner {
+  width:70%;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding:25px 25px 25px 140px;
+}
+.article5 .askinner .guide h4 {
+  font-size: 24px;
+}
+.article5 #form { 
+  position: relative;
+  padding:40px 0 80px 0; }
+.article5 #form p {
+  margin-top:7px;
+}
+.article5 #form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.article5 #form input {
+  height:25px;
+  margin-top:7px;
+  color:#444;
+  font-size: 14px;
+}
+.article5 #form select {
+  height:25px;
+}
+.article5 #form .tel {
+  width:70px;
+  margin:0 3px;
+}
+.article5 .askinner .policy {
+  width:60%;
+  background: #f7f7f7;
+  border:1px solid #444;
+  font-size:14px; 
+  color:#444;
+  margin-bottom: 15px;
+}
+.article5 .askinner .policy > div {
+  height:170px; 
+  overflow-y:scroll;
+}
+.article5 .check1 label {
+  cursor: pointer;
+}
+.article5 .check1 input[type=checkbox] {  
   display:none;
 }
-/* footer */
-/* 트위터 네이버블로그로 수정 */
-#footer .footerinner {
-  background: #505050;
+.article5 .check1 .select1 { padding-left: 25px; }
+.article5 .check1 input+label {
+  background-image: url(../images/selectoff.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:20px; height:20px;
 }
-#footer .footerinner a {
-  float:right;
-  top:0; left:0px; 
+.article5 .check1 input:checked+label {
+  background-image: url(../images/selecton.png);
+}
+.article5 .askinner h5 input { display: none; }
+.article5 .askinner h5 label { padding-left: 25px; }
+.article5 .askinner h5 input+label {
+  background-image: url(../images/checkoff.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:20px; height:20px;
+}
+.article5 .askinner h5 input:checked+label {
+  background-image: url(../images/checkon.png);
+}
+/* 수정 */
+.article5 button {
+  width:300px;
+  background-color: #ff5b1a;
   color:#fff;
-  font-size: 25px;
-  padding:20px 15px;
+  border:1px solid #ff5b1a;
+  border-radius: 15px;
+  padding:20px;
+  position: absolute;
+  bottom:20px;
+  right:35px;
+  font-size:18px;
 }
-#footer .footerinner .adress {
-  color:#fff;
-  padding:50px 50px;
+
+
+
+
+
+
+
 }
 
 
+@media screen and (max-width:768px) {
+  #header .inner { 
+    /* display: flex;
+     justify-content: center; 
+     align-items: center; */
+     padding:10px;
+    }
+  #header h1 { padding:10px; }
+  #header h1 img { width:150px;}
+  #header .opennav {
+    display: block;
+  }
+  #header #nav,
+  #header .join
+  { display: none; }
+  #header .inner { 
+    max-width: 100%;
+    margin:0 auto; 
+    padding: 0 40px;
+    background: #000; 
+    color:#fff; 
+    position: relative;
+  }
+  /* 수정 */
+  #header .inner .join a { 
+    margin-left:15px;  
+    background:#ff5b1a;
+    border:1px solid #ff5b1a;
+    color:#fff;
+    border-radius: 25px;
+    padding:10px 24px;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  /* 수정 */
+  #header .opennav {
+    display: block;
+    position: absolute;
+    top:50%; right:50px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+  /* 수정 */
+  #header #nav { 
+    position: absolute;
+    top:50%; left:20%;
+    z-index: 9999;
+    transform:translateY(-50%);
+    font-size:16px; 
+    color:#fff; 
+    font-family: 'Gothic A1', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  /* 수정 */
+  #header .depth1 > li { 
+    float: left; 
+    padding: 26px 20px 26px;
+    position: relative;
+    text-align: center;
+  }
+  #header #nav .depth1 > li:hover { color: #ff5b1a }
+  #header #nav .depth1 > li:hover .depth2 { display: block;}
+  #header .depth2 { 
+    display: none;
+    width:140px;
+    position: static; 
+    top:100%; left:0; 
+    color: #fff;
+    text-align: center;
+    margin: 10px 5px; 
+    z-index: 99;
+  
+  }
+  #header .depth2 li { background: rgba(0,0,0,0.8); }
+  #header .depth2 li a {
+    display: block;
+    padding: 10px 10px 10px;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+  #header .depth2 > li:hover a { 
+    color: #ff5b1a;
+    background: rgba(255,255,255,0.3);
+  }
+  
+  /* section */
+  /* article1 */
+  #section .article1 { 
+    position: relative;
+    margin:0px 50px 20px;
+  }
+  
+  
+  /* article2  수정*/
+  #section .article2 {
+    background-size: 250px, 200px;
+    background-color: #505050;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    font-family:'Gothic A1', sans-serif;
+    line-height: 1.5;
+    padding:40px 0px;
+    background-image:none
+  }
+  #section .article2 img { 
+    display: none;
+  }
+  #section .article2 .about {
+    margin:150px 0px;
+    text-align: center;
+  }
+  #section .article2 .about h2 {
+    font-size:30px;
+    margin-bottom: 22px;
+  }
 
 
+  /* article3 */
+  #section .article3 { 
+    position: relative;
+    width:100%;
+    height: 100vh;
+    background: #fff;
+  }
+  /* 수정 */
+  #section .survicebox {
+    background: #ff5b1a;
+    color: #fff;
+    width:100%;
+    padding:20px;
+    position: relative;
+  }
+  /* 수정 */
+  #section .article3 .survicetext {
+    position: absolute;
+    top:16%; left:25%;
 
-
-
-
+  }
+  #section .article3 .survicetext h2 {
+    font-size: 42px;
+    margin-bottom:20px;
+  }
+  /* 수정 */
+  #section .article3 .survicetext p {
+    word-break: keep-all;
+    font-size: 14px;
+    text-align: center;
+  }
+  /* 수정 */
+  #section .article3 .survicebox > span {
+   border:1px solid #fff;
+   position: absolute;
+   bottom:65%; left:41%;
+   padding:5px 10px;
+  }
+  /* 수정 */
+  #section .article3 .changebox {
+    width:100%;
+    margin-left:0%;
+    height:100vh;
+    overflow-y: scroll; 
+    color:#fff;
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    position: absolute;
+    top:30%; left:50%;
+    transform: translateX(-50%);
+    /* display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap; */
+    z-index: 99999;
+  }
+  /* 수정 */
+  #section .article3 .changebox img {
+    width:100px;
+    margin:0px 0px;
+    position: absolute;
+    top:20%; left:20%;
+    /* flex:1 1 40%; */
+  }
+  .article3 .changebox img:nth-last-child(2n) {
+    margin-left: 10px;
+  }
+  /* 수정 */
+  #section .article3 .changebox h3 {
+    font-size: 15px;
+    position: absolute;
+    top:0%; left:0%;
+  }
+  /* 수정 */
+  #section .article3 .changebox p {
+    position: absolute;
+    top:69%; left:57%;
+    word-break: keep-all;
+    display: none;
+  }
+  #section .article3 .changebox .place {
+    /* float:right; */
+    position: relative;
+  }
+  /* 수정 */
+  #section .article3 .textbox::before {
+    content: '';
+    position: absolute; 
+    top:58%; left:54%; bottom:0; right:0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 330px;
+    height:155px;
+    display: none;
+  }
+  /* 추가 */
+  .article3 .textbox .aniarr {
+    display: none;
+  }
+  
+  
+  
+  /* article4 */
+  .article4 {
+    background: #000;
+    color:#fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+  }
+  .article4 h3 {
+    font-size:48px;
+    color:#ff5b1a;
+    padding: 70px 0 15px;
+    font-family: 'Black Han Sans', sans-serif;
+    letter-spacing: 2px;
+  }
+  .article4 .slide-group {
+    margin: 0 auto;
+    Width:60%;
+    margin-top: 40px;
+  
+  }
+  .article4 .slide {
+  margin: 0 10px;
+  position: relative;
+  margin-bottom: 80px;
+  }
+  .article4 .slide a::before {
+    content: '';
+    position:absolute; top:0; bottom:0; right:0; left:0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition:all 0.4s
+  }
+  .article4 .slide a:hover::before { opacity: 1; }
+  .article4 .slide-group .slick-arrow {
+    border:none; background:none;
+    font-size:54px; color:#fff; 
+    position:absolute; top:9%; 
+  
+  }
+  .article4 .slide-group .arrleft {
+    left:-80px; z-index:99;
+  }
+  .article4 .slide-group .arrright {
+    right:-80px;; z-index:99;
+  }
+  .article4 li {display: none;}
+  
+  
+  
+  
+  /* article5 */
+  
+  .article5 .askbox {
+    width:100%;
+    background-color: #ff5b1a;
+    padding-top: 80px;
+    padding-bottom: 75px;
+    position: relative;
+  }
+  .article5 .wait {
+    width:20%;
+    background: #000;
+    position: absolute;
+    top:50%; left:0;
+    transform:translateY(-50%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:40px 0;
+  }
+  
+  
+  /* .article5 .wait { transform:translateX(-50%); opacity:0; transition:all 1s } */
+  /* .article5.on .wait {transform:translateX(20%); opacity:1 } */
+  .article5 .wait .waittext {
+    text-align: center;
+    color:#e8fd01
+  }
+  .article5 .wait img{
+    width:45%;
+    margin:30px 0px 45px 0px;
+  }
+  .article5 .wait h4 {
+    font-size:30px;
+    margin-bottom: 10px;
+  }
+  .article5 .waittext a {
+    color:#fff;
+    margin: 20px 0 30px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding:10px 16px;
+    margin-top: 60px;
+  }
+  /* 추가 */
+  /* .article5 .waittext > img {
+    opacity: 0;
+  } */
+  .article5 .askbox .askinner {
+    width:70%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding:25px 25px 25px 140px;
+  }
+  .article5 .askinner .guide h4 {
+    font-size: 24px;
+  }
+  .article5 #form { 
+    position: relative;
+    padding:40px 0 80px 0; }
+  .article5 #form p {
+    margin-top:7px;
+  }
+  .article5 #form label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .article5 #form input {
+    height:25px;
+    margin-top:7px;
+    color:#444;
+    font-size: 14px;
+  }
+  .article5 #form select {
+    height:25px;
+  }
+  .article5 #form .tel {
+    width:70px;
+    margin:0 3px;
+  }
+  .article5 .askinner .policy {
+    width:60%;
+    background: #f7f7f7;
+    border:1px solid #444;
+    font-size:14px; 
+    color:#444;
+    margin-bottom: 15px;
+  }
+  .article5 .askinner .policy > div {
+    height:170px; 
+    overflow-y:scroll;
+  }
+  .article5 .check1 label {
+    cursor: pointer;
+  }
+  .article5 .check1 input[type=checkbox] {  
+    display:none;
+  }
+  .article5 .check1 .select1 { padding-left: 25px; }
+  .article5 .check1 input+label {
+    background-image: url(../images/selectoff.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:20px; height:20px;
+  }
+  .article5 .check1 input:checked+label {
+    background-image: url(../images/selecton.png);
+  }
+  .article5 .askinner h5 input { display: none; }
+  .article5 .askinner h5 label { padding-left: 25px; }
+  .article5 .askinner h5 input+label {
+    background-image: url(../images/checkoff.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:20px; height:20px;
+  }
+  .article5 .askinner h5 input:checked+label {
+    background-image: url(../images/checkon.png);
+  }
+  /* 수정 */
+  .article5 button {
+    width:300px;
+    background-color: #ff5b1a;
+    color:#fff;
+    border:1px solid #ff5b1a;
+    border-radius: 15px;
+    padding:20px;
+    position: absolute;
+    bottom:20px;
+    right:35px;
+    font-size:18px;
+  }
+  
+  
 
 
 
